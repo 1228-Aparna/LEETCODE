@@ -1,0 +1,11 @@
+class Solution:
+    def bitwiseComplement(self, n: int) -> int:
+        b = bin(n).replace("0b","")
+        ones = ""
+        for i in range(len(b)):
+            if b[i] == '0':
+                ones += '1'
+            else:
+                ones += '0'
+        return int(ones, 2)
+        
