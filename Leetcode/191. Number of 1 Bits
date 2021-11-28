@@ -1,5 +1,0 @@
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        s = str(bin(n).replace("0b", ""))
-        return s.count('1')
-        

@@ -1,6 +1,0 @@
-class Solution:
-    def reverseBits(self, n: int) -> int:
-        b= '{:032b}'.format(n)
-        rb = b[::-1]
-        num = int(rb, 2)
-        return num
