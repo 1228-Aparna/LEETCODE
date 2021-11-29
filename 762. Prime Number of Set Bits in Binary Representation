@@ -1,0 +1,21 @@
+class Solution:
+    def isPrime(self, n: int)-> bool:
+        if n <= 1:
+            return False
+        elif n == 2:
+            return True
+        elif n>2 and n%2 == 0:
+            return False
+        f = 0
+        for i in range(3, int(math.sqrt(n))+1, 2):
+            if n % i == 0:
+                return False
+        return True
+    def countPrimeSetBits(self, left: int, right: int) -> int:
+        cnt = 0
+        for i in range(left, right+1):
+            b = bin(i).replace("0b", "")
+            a = b.count('1')
+            if self.isPrime(a):
+                cnt += 1
+        return cnt
