@@ -1,0 +1,19 @@
+class Solution:
+    def findErrorNums(self, nums: List[int]) -> List[int]:
+        s = set(nums)
+        n = len(nums)
+        t = (n*(n+1)//2)
+        r = sum(nums)-sum(s)
+        m = t - sum(s)
+        return [r, m]
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
